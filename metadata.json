@@ -1,0 +1,34 @@
+{
+  "name": "feffery-skill",
+  "description": "Feffery Dash 组件专家 - 支持 5 个库共 281 个组件的查询、示例和场景推荐",
+  "version": "1.0.0",
+  "author": "LeslieWu",
+  "repository": "https://github.com/LeslieWuboy/feffery_dash_antd_skill",
+  "libraries": [
+    {
+      "name": "feffery-antd-components",
+      "prefix": "fac",
+      "components": 112
+    },
+    {
+      "name": "feffery-antd-charts",
+      "prefix": "fact",
+      "components": 29
+    },
+    {
+      "name": "feffery-utils-components",
+      "prefix": "fuc",
+      "components": 122
+    },
+    {
+      "name": "feffery-markdown-components",
+      "prefix": "fmc",
+      "components": 2
+    },
+    {
+      "name": "feffery-leaflet-components",
+      "prefix": "flc",
+      "components": 16
+    }
+  ]
+}
