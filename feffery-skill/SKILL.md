@@ -48,7 +48,19 @@ Dash 开发者常常不知道 Feffery 生态里有哪些组件、某个组件支
 
 ## 数据访问模式
 
-组件数据位于 `/Users/leslie/coding/items/feffery_docs_analysis/parsed_output/`，使用三层渐进加载：
+**数据路径配置**：默认使用 `parsed_output/` 目录（相对于 skill 所在项目的根目录）。
+
+如果路径不同，请在项目根目录创建 `.claude/settings.local.json` 配置：
+
+```json
+{
+  "feffery-skill": {
+    "data-path": "/your/custom/path/parsed_output/"
+  }
+}
+```
+
+使用三层渐进加载：
 
 ### Layer 1: 索引搜索
 

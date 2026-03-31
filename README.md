@@ -30,6 +30,49 @@ cp -r skill/feffery-skill /your-project/.claude/skills/
 
 在 Claude Code 中提及 feffery、fac、fact、fuc、fmc、flc 或 Dash 组件相关关键词时，此 skill 会自动激活。
 
+## 数据目录配置
+
+Skill 需要从 `parsed_output/` 目录读取组件文档数据。
+
+**方式 1：默认路径（推荐）**
+
+在项目根目录下创建 `parsed_output/` 目录：
+
+```
+your-project/
+├── .claude/
+│   └── skills/
+│       └── feffery-skill/
+└── parsed_output/          # 数据目录
+    ├── feffery-antd-components/
+    ├── feffery-antd-charts/
+    └── ...
+```
+
+**方式 2：自定义路径**
+
+如果数据在其他位置，在项目根目录创建 `.claude/settings.local.json`：
+
+```json
+{
+  "feffery-skill": {
+    "data-path": "/your/custom/path/parsed_output/"
+  }
+}
+```
+
+## 生成数据
+
+使用 [parse_docs.py](parse_docs.py) 脚本从 Feffery 官方文档生成数据：
+
+```bash
+# 克隆 feffery 文档仓库
+git clone https://github.com/feffery/feffery-docs.git
+
+# 运行解析脚本
+python parse_docs.py --docs-dir feffery-docs --output-dir parsed_output
+```
+
 ## 文件结构
 
 ```
